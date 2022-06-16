@@ -23,12 +23,20 @@ void matriks::input(){
     cout << data[i] << " ";
   }
 }
-
-
-
-
-
-
+void matriks::penyortiran(){
+  for (int i=0; i<19; i++){ // penyortiran data
+    for(int j= i+1; j<19; j++ ){
+      if (data[i]>data[j]){
+        tukar=data[i];
+        data[i]=data[j];
+        data[j]=tukar;   
+      }
+    }
+  }
+  for(int i=0; i<20; i++){
+    cout << data[i] << " ";
+  }
+}
 void matriks::konversi(){
   int i=0;
   cout << "Masukkan banyak kolom: ";
